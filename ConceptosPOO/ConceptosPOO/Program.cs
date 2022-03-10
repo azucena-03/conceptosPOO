@@ -9,17 +9,33 @@ namespace ConceptosPOO
             Console.WriteLine("POO concepts!");
             Console.WriteLine("=============");
 
-            try
+            Employee employee1 = new SalaryEmployee()
             {
-                Console.WriteLine(new Date(29, 2, 2024));
-                Console.WriteLine(new Date(12, 6, 1997));
-                Console.WriteLine(new Date(30, 11, 2003));
-            }
-            catch (Exception error)
-            {
+                Id = 1010,
+                FirstName = "Ana",
+                LastName = "Morales",
+                BirthDate = new Date(2, 12, 2000),
+                HireDate = new Date(15, 6,2019),
+                IsActive = true,
+                Salary = 1563.121M
+            };
 
-                Console.WriteLine(error.Message);
-            }
+            Console.WriteLine(employee1);
+
+            Employee employee2 = new CommissionEmployee()
+            {
+                Id = 2020,
+                FirstName = "Antonio",
+                LastName = "Sanchez",
+                BirthDate = new Date(15, 6, 1997),
+                HireDate = new Date(15, 6, 2020),
+                IsActive = true,
+                Sales = 2520121M,
+                CommissionPercentaje = 0.03F
+            };
+
+            Console.WriteLine(employee2);
+
         }
     }
 }
